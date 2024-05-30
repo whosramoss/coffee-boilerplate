@@ -1,0 +1,77 @@
+.parallax-image-ukiyo {
+  @apply pointer-events-none mt-[12.5em];
+}
+.parallax-img-size-1 {
+  @apply ml-[10%] h-[75vh] w-[33.3333%];
+}
+.parallax-img-position-r {
+  @apply ml-auto mr-[10%];
+}
+.parallax-img-size-full {
+  @apply h-[115vh] w-full;
+}
+.parallax-img-size-2 {
+  @apply h-screen w-6/12;
+}
+
+@media screen and (max-width: 800px) {
+  .parallax-img-position-l {
+    @apply ml-0;
+  }
+  .parallax-img-position-r {
+    @apply mr-0;
+  }
+  .parallax-img-size-full {
+    @apply h-screen;
+  }
+  .parallax-img-size-1 {
+    @apply h-[75vh] w-9/12;
+  }
+  .parallax-img-size-2 {
+    @apply h-screen w-9/12;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .parallax-img-size-full {
+    @apply h-[500px];
+  }
+  .parallax-img-size-2 {
+    @apply h-[500px] w-9/12;
+  }
+}
+
+.letters-animation {
+  @apply relative whitespace-nowrap;
+}
+.letters-animation p {
+  @apply relative m-0 pr-[50px] text-[230px] font-medium text-[white];
+}
+.letters-animation p:nth-of-type(2) {
+  @apply absolute left-full top-0;
+}
+@media screen and (max-width: 800px) {
+  .letters-animation p {
+    @apply text-[100px];
+  }
+}
+
+.cup-animation {
+  background: url("https://i.imgur.com/XVzRObX.png");
+  background-repeat: repeat-x;
+  background-position: 0px 140px;
+  animation: fill 3.5s infinite;
+}
+
+@keyframes fill {
+  0% {
+    background-position: 0px 140px;
+  }
+  40% {
+    background-position: -900px 50px;
+  }
+
+  80% {
+    background-position: -1350px -40px;
+  }
+}

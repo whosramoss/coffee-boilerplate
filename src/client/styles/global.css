@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("animations.css");
+
+@layer base {
+  :root {
+    --primary: #d8ae7e;
+    --secondary: #f8c794;
+    --third: #ffe0b5;
+    --white: #f8f4e1;
+    --black: #322c2b;
+  }
+
+  .dark {
+    --primary: #543310;
+    --secondary: #74512d;
+    --third: #af8f6f;
+    --white: #f8f4e1;
+    --black: #322c2b;
+  }
+}
+
+@layer base {
+  html {
+    @apply font-medium;
+    font-family: Neue Montreal;
+  }
+
+  body {
+    @apply overflow-x-hidden;
+  }
+}
+
+.login .inputBx {
+  position: relative;
+  width: 100%;
+}
+.login .inputBx input {
+  position: relative;
+  width: 100%;
+  padding: 12px 20px;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 40px;
+  font-size: 1.2em;
+  color: #fff;
+  box-shadow: none;
+  outline: none;
+}
+.login .inputBx input[type="submit"] {
+  width: 100%;
+  background: #0078ff;
+  background: linear-gradient(45deg, #ff357a, #fff172);
+  border: none;
+  cursor: pointer;
+}
+.login .inputBx input::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+input[type="text"]:focus ~ .input-text,
+input[type="text"]:not(:placeholder-shown) ~ .input-text {
+  @apply -translate-x-2 -translate-y-10 scale-75 transform text-blue-500;
+}
