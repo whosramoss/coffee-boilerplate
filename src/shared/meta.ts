@@ -8,7 +8,7 @@ export const PARALLAX_IMAGE_CLASS = "parallax-image-ukiyo";
 export const META_NAME = "Coffee Boilerplate";
 export const META_DESCRIPTION = `NextJs boilerplate to creative projects and coffee lovers`;
 export const META_THUMBNAIL =
-  "https://github.com/whosramoss/coffee-boilerplate/coffee-boilerplate-thumbnail.png";
+  "https://github.com/whosramoss/coffee-boilerplate/blob/main/docs/coffee-boilerplate-thumbnail.png";
 export const META_URL = "https://www.coffee-boilerplate.vercel.com/";
 export const META_SITENAME = "www.coffee-boilerplate.vercel.com";
 export const META_BASE = "http://localhost:3000";
