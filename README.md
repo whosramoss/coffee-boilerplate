@@ -42,6 +42,16 @@
   npm run dev
 ```
 
+## How to build ⚡
+- To generate a static build, you must make the `distDir`, `output`, `trailingSlash` parameters visible in the `next.config.mjs` file 
+
+- Don't forget to set the `isLocalTest` variable to false in `meta.ts`
+- run the command:
+
+```bash
+  npm run build
+```
+
 ## Structure 📂
 
 - [src](./src/) – Add all folders below
