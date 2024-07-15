@@ -43,15 +43,18 @@
 ```
 
 ## How to build ⚡
-- To generate a static build, you must make the `distDir`, `output`, `trailingSlash` parameters visible in the `next.config.mjs` file 
-
-- Don't forget to set the `isLocalTest` variable to false in `meta.ts`
-- run the command:
-
+- To generate a static compilation, the `next.config.mjs` file must have the parameters below :
+```bash
+const staticbuild = {
+  distDir: 'build',
+  output: 'export',
+  trailingSlash: true,
+}
+```
+- Run the command:
 ```bash
   npm run build
 ```
-
 ## Structure 📂
 
 - [src](./src/) – Add all folders below
