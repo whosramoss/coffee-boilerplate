@@ -2,6 +2,15 @@ import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import ms from "ms";
 
+export const PARALLAX_IMAGE_CLASS = "parallax-image-ukiyo";
+
+export const Links = {
+  githubAccountLink: "https://github.com/whosramoss",
+  githubProjectLink: "https://github.com/whosramoss/coffee-boilerplate",
+  fakeCoffeeApiLink: "https://fake-coffee-api.vercel.app/",
+};
+
+
 export const capitalize = (str: string) => {
   if (!str || typeof str !== "string") return str;
   return str.charAt(0).toUpperCase() + str.slice(1);
@@ -18,9 +27,8 @@ export const cn = (...inputs: ClassValue[]) => {
 
 export const timeAgo = (timestamp: Date, timeOnly?: boolean): string => {
   if (!timestamp) return "never";
-  return `${ms(Date.now() - new Date(timestamp).getTime())}${
-    timeOnly ? "" : " ago"
-  }`;
+  return `${ms(Date.now() - new Date(timestamp).getTime())}${timeOnly ? "" : " ago"
+    }`;
 };
 
 export const lerp = (start: number, end: number, amt: number) => {

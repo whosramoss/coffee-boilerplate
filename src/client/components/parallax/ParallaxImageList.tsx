@@ -6,7 +6,7 @@ import Center from "@components/Center";
 import IconCup from "@components/icons/IconCup";
 import { useApiFetch } from "@hooks/useApiFetch";
 import { useAnimationParallax } from "@hooks/useAnimationParallax";
-import { PARALLAX_IMAGE_CLASS } from "@shared/meta";
+import { PARALLAX_IMAGE_CLASS } from "@shared/utils";
 
 export default function ParallaxImageList() {
   useAnimationParallax();

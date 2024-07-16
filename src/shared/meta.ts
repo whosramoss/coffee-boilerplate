@@ -1,20 +1,17 @@
-export const Links = {
-  githubAccountLink: "https://github.com/whosramoss",
-  githubProjectLink: "https://github.com/whosramoss/coffee-boilerplate",
-  fakeCoffeeApiLink: "https://fake-coffee-api.vercel.app/",
-};
+const isLocalTest = true;
+const META_URL = "https://www.coffee-boilerplate.vercel.com/";
 
-export const PARALLAX_IMAGE_CLASS = "parallax-image-ukiyo";
-export const META_NAME = "Coffee Boilerplate";
-export const META_DESCRIPTION = `NextJs boilerplate to creative projects and coffee lovers`;
-export const META_THUMBNAIL =
-  "https://github.com/whosramoss/coffee-boilerplate/blob/main/docs/coffee-boilerplate-thumbnail.png";
-export const META_URL = "https://www.coffee-boilerplate.vercel.com/";
-export const META_SITENAME = "www.coffee-boilerplate.vercel.com";
-export const META_BASE = "http://localhost:3000";
-export const META_LOCALE = "pt-BR";
+export const META_IMAGE_PATH = isLocalTest ? './' : META_URL;
 
-export const openDefaultMetada = {
+const META_NAME = "Coffee Boilerplate";
+const META_DESCRIPTION = `NextJs boilerplate to creative projects and coffee lovers`;
+const META_LOCALE = "en";
+
+const META_SITENAME = META_URL;
+const META_THUMBNAIL = `${META_URL}coffee-boilerplate-thumbnail.png`;
+const META_BASE = isLocalTest ? "http://localhost:3000/" : META_URL;
+
+const openDefaultMetada = {
   default: {
     title: META_NAME,
     applicationName: META_NAME,
@@ -31,11 +28,25 @@ export const openDefaultMetada = {
       "Cold brew",
       "Café gelado",
     ],
+    alternates: {
+      canonical: META_URL,
+    },
+    manifest: `${META_URL}manifest.json`,
+    icons: [
+      { rel: 'shortcut icon', type: "image/x-icon", url: `${META_URL}favicon.ico` },
+      { rel: 'icon', type: "image/x-icon", url: `${META_URL}favicon.ico` },
+      { rel: 'icon', type: "image/png", url: `${META_URL}favicon-32x32.png`, sizes: "32x32" },
+      { rel: 'icon', type: "image/png", url: `${META_URL}favicon-16x16.png`, sizes: "16x16", },
+      { rel: 'icon', type: "image/png", url: `${META_URL}android-chrome-192x192.png`, sizes: "192x192" },
+      { rel: 'icon', type: "image/png", url: `${META_URL}android-chrome-512x512.png`, sizes: "512x512" },
+      { rel: 'apple-touch-icon', url: `${META_URL}apple-touch-icon.png`, sizes: "180x180", },
+    ],
   },
   robots: {
     index: true,
     follow: true,
     nocache: false,
+    canonical: META_URL,
     googleBot: {
       index: true,
       follow: false,
@@ -70,4 +81,13 @@ export const openDefaultMetada = {
       images: META_THUMBNAIL,
     },
   },
+};
+
+export const baseMetadata = isLocalTest ? {
+  ...openDefaultMetada.default,
+  ...openDefaultMetada.robots,
+} : {
+  ...openDefaultMetada.default,
+  ...openDefaultMetada.robots,
+  ...openDefaultMetada.graph
 };

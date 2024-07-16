@@ -1,4 +1,4 @@
-import { PARALLAX_IMAGE_CLASS } from "@shared/meta";
+import { PARALLAX_IMAGE_CLASS } from "@shared/utils";
 import { useEffect } from "react";
 import Ukiyo from "ukiyojs";
 

@@ -1,5 +1,6 @@
 import LinkButton from "@components/buttons/LinkButton";
-import { Links, META_NAME } from "@shared/meta";
+import { META_NAME } from "@shared/meta";
+import { Links } from "@shared/utils";
 import React from "react";
 
 export default function Footer() {
